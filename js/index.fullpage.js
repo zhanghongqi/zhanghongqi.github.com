@@ -7,19 +7,55 @@
 			navigationPosition:'right',		//右边圆点
 			navigationTooltips:['首页','关于我','专业技能','我的作品'],
 			fixedElements:'#header,header',
+			afterRender:function(link,index){
+				move('header').set('opacity','1').duration('1.5s').end();
+				move('#header').set('opacity','0.5').duration('1.5s').end();
+				
+			},
+			
+
 			afterLoad:function(link,index){
 				switch(index){
 					case 1:
-					move('#home_countent').set('margin-top','0')
-		.duration('2s').end();
-					move('#home_info1').set('margin-top','60px').duration('2s').end();
-					move('#home_info2').set('margin-top','15px').duration('3s').end();
-					move('#home_info3').set('margin-top','15px').duration('4s').end();
-					move('#home_info4').set('margin-top','15px').duration('4.5s').end();
+	
+					move('#home_countent').set('margin-top','0').duration('0.7s').end(function(){
+						move('#home_info1').set('margin-top','60px').duration('0.7s').end(function(){
+							move('#home_info2').set('margin-top','15px').duration('0.7s').end(function(){
+								move('#home_info3').set('margin-top','15px').duration('0.7s').end(function(){
+									move('#home_info4').set('margin-top','15px').duration('0.7s').end();
+								});
+							});
+						});
+					});
+					
+
+					break
+
+					case 2:
+
+					move('.title').scale(2).end(function(){
+						move('#about_p').set('opacity','1').duration('0.7s').end()
+					});
 					
 					break
+
+					case 3:
+					break
+
+
+				}
+			},
+
+			onLeave:function(link,index){
+				switch(index){
+					case 1:
+					break
+
+					case 2:
+					move('.title').scale(1).end();
 				}
 			}
-			
+
+
 		});
 	});

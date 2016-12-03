@@ -1,9 +1,9 @@
 *{
 		padding: 0;
 		margin: 0;
+		font-family: 'Microsoft YaHei';
 	}
 		html,body{
-		color: #fff;
 		width: 100%;
 		}
 		
@@ -30,7 +30,7 @@
 			position: fixed;
 			top: 0;
 			left: 0;
-			opacity: 0.3;
+			opacity: 0;
 
 		}
 		header{
@@ -39,6 +39,7 @@
 			position: fixed;
 			top: 0;
 			left: 0;
+			opacity: 0.3;
 
 		}
 		header #header-left{
@@ -68,6 +69,7 @@
 			color: #000;
 			font-size: 12px;
 			width: 90px;
+			
 		}
 
 
@@ -118,13 +120,15 @@
 		
 
 
-		#home,#about{
+		#home,#about,#skill{
 			width: 100%;
 			height: 100%;
 			background: url(../img/background.jpg) no-repeat;
 			background-size: 120% 120%;
 			overflow: hidden;
+
 		}
+		
 		#home_countent{
 			width: 1000px;
 			margin: 800px auto;
@@ -171,4 +175,111 @@
 			color: #000;
 		}
 
+		/*关于我*/
 
+		
+		.title{
+			width: 150px;
+			margin: 0 auto;
+			text-align:center;
+			margin-top: 100px;
+			font-size: 20px;
+			font-weight: normal;
+		}
+		#about_content{
+			width: 775px;
+			height: 210px;
+			margin: 50px auto;
+			border-radius:30px;
+			background: #afc7e0;
+		}
+
+		#about_content ul li{
+			float: left;
+			list-style: none;
+			margin-left: 75px;
+			margin-top: 20px;
+			width: 100px;
+		}
+
+		#about_content ul li:hover .about_img{
+			box-shadow: 0 0 5px 8px #999;
+		}
+
+		.about_img{
+			background-size: 100%;
+			box-shadow: 0 0 0 4px #fff;
+			height: 100px;
+			border-radius: 50%;
+			-webkit-transition: background 1s, color 1s, box-shadow 1s;
+			transition: background 1s, color 1s, box-shadow 1s;
+		}
+		
+		.about_cn{
+			margin-top: 30px;
+			position: relative;
+			font-size: 14px;
+		}
+		.about_cn p{
+			padding-top: 10px;
+			text-align: right;
+		}
+		.about_cn p:before{
+			display: block;
+			content: "";
+			position: absolute;
+			background: #999;
+			height: 2px;
+			width: 90px;
+			bottom: 25px;
+			-webkit-transform: rotate(-30deg);
+			transform: rotate(-30deg);
+		}
+
+		#about_img1:before {
+			content: url(../img/education.png);
+		}
+		#about_img2:before {
+			content: url(../img/age.png);
+		}
+		#about_img3:before {
+			content: url(../img/location.png);
+		}
+		#about_img4:before {
+			content: url(../img/status.png);
+		}
+		.about_img:before{
+			display: block;
+	   	 	line-height: 150px;
+	    	text-align: center;
+		}
+
+		#about_p{
+			width: 800px;
+			margin: 0 auto;
+			position: relative;
+			opacity: 0;
+		}
+		#about_p p{
+			text-align: center;
+		}
+		#about_p:before{
+			content: '';
+			height: 40px;
+			width: 20px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-left:2px solid #5686D6;
+			border-top:2px solid #5686D6;
+		}
+		#about_p:after{
+			content: '';
+			height: 40px;
+			width: 20px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			border-right:2px solid #5686D6;
+			border-bottom:2px solid #5686D6;
+		}
