@@ -192,6 +192,7 @@
 			margin: 50px auto;
 			border-radius:30px;
 			background: #afc7e0;
+			overflow: hidden;
 		}
 
 		#about_content ul li{
