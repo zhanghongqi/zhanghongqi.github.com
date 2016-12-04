@@ -25,6 +25,23 @@
 	},function(){
 		$(this).stop(true,false).fadeTo(800,0);
 	})
+
+	// 技能明细切换
+	$(".skill_icon").click(function(){
+		$(".skill_textbox").each(function(){
+			if($(this).is(":visible")){
+				$(this).slideUp(200);
+				$(this).prev().removeClass("skill_flag_rotate");
+			}
+		});
+		if($(this).siblings(".skill_textbox").is(":hidden")){
+			$(this).siblings(".skill_textbox").slideDown(400);
+			$(this).siblings(".skill_flag").addClass("skill_flag_rotate");
+		}else{
+			$(this).siblings(".skill_textbox").slideUp(200);
+			$(this).siblings(".skill_flag").removeClass("skill_flag_rotate");
+		}
+	});
 	
 	
 	

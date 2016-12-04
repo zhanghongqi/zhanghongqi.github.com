@@ -33,13 +33,14 @@
 
 					case 2:
 
-					move('.title').scale(2).end(function(){
+					move('#about .title').scale(2).end(function(){
 						move('#about_p').set('opacity','1').duration('0.7s').end()
 					});
 					
 					break
 
 					case 3:
+					move('#skill .title').scale(2).end();
 					break
 
 
@@ -52,7 +53,12 @@
 					break
 
 					case 2:
-					move('.title').scale(1).end();
+					move('#about .title').scale(1).end();
+					break
+
+					case 3:
+					move('#skill .title').scale(1).end();
+					break
 				}
 			}
 
