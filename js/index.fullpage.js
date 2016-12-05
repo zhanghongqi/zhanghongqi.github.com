@@ -5,7 +5,7 @@
 			verticalCentered:false,		//不居中
 			navigation:true,		//打开小圆点导航
 			navigationPosition:'right',		//右边圆点
-			navigationTooltips:['首页','关于我','专业技能','我的作品'],
+			navigationTooltips:['首页','关于我','专业技能','我的作品','我的经历','联系我'],
 			fixedElements:'#header,header',
 			afterRender:function(link,index){
 				move('header').set('opacity','1').duration('1.5s').end();
@@ -43,6 +43,22 @@
 					move('#skill .title').scale(2).end();
 					break
 
+					case 4:
+					move('#works .title').scale(2).end();
+					break
+
+					case 5:
+					move('#experience .title').scale(2).end();
+					break
+
+
+
+
+					case 6:
+					move('#contact .title').scale(2).end();
+					move('.contact_content').set('opacity','1').duration('1.5s').end()
+					break
+
 
 				}
 			},
@@ -58,6 +74,18 @@
 
 					case 3:
 					move('#skill .title').scale(1).end();
+					break
+
+					case 4:
+					move('#works .title').scale(1).end();
+					break
+
+					case 5:
+					move('#experience .title').scale(1).end();
+					break
+
+					case 6:
+					move('#contact .title').scale(1).end();
 					break
 				}
 			}
