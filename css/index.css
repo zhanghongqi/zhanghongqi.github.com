@@ -385,6 +385,7 @@
 		margin: 0 auto;
 		margin-top: 50px;
 		overflow: hidden;	
+		opacity: 0;
 		}
 		.works_content li{
 		width: 170px;

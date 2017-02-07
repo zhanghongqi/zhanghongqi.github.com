@@ -44,7 +44,9 @@
 					break
 
 					case 4:
-					move('#works .title').scale(2).end();
+					move('#works .title').scale(2).end(function(){
+						move('.works_content').set('opacity','1').duration('0.7s').end()
+					});
 					break
 
 					case 5:
